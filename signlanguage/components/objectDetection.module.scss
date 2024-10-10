@@ -1,0 +1,223 @@
+@import '@styles/variable.scss';
+
+.loader {
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        margin: 10px;
+        text-align: center;
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90vw;
+    height: 80vh;
+    padding: 20px;
+}
+
+.imageSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: $tertiaryShadow;
+    border-radius: 10px;
+    width: 50%;
+    height: auto;
+    background: $primaryGradient;
+    margin-bottom: 10px;
+}
+
+.previewArea {
+    width: 100%;
+    min-height: 500px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px 0 #222222;
+    margin-bottom: 30px;
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .canvas {
+        border-radius: 10px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.fileUpload {
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-size: $font-14;
+    font-weight: $font-600;
+    border: none;
+    margin: 20px 0px;
+    color: $primaryTextColor;
+    background: $primaryGradient;
+    box-shadow: $primaryShadow;
+    transition: $secondaryTransition;
+    cursor: pointer;
+
+    span {
+        margin-right: 10px;
+        i::before {
+            font-weight: $font-600 !important;
+        }
+    }
+
+    &:hover {
+        color: $white;
+        background: $secondaryGradient;
+        transform: translateY(5px);
+    }
+
+    input {
+        display: none;
+    }
+}
+
+.dataSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+
+    ul {
+        margin-top: 20px;
+        list-style: none;
+        width: 100%;
+
+        li {
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: $tertiaryShadow;
+            background: $primaryGradient;
+
+            p {
+                margin-bottom: 0;
+
+                label {
+                    font-weight: $font-600;
+                }
+
+                span {
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 821px) {
+    .container {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+
+        .imageSection {
+            width: 100%;
+        }
+
+        .previewArea {
+            min-height: 500px;
+        }
+
+        .fileUpload {
+            margin: 10px 0;
+        }
+
+        .detectionBtn {
+            margin: 10px 0;
+        }
+
+        .dataSection {
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+
+        .imageSection {
+            width: 100%;
+        }
+
+        .previewArea {
+            min-height: 350px;
+        }
+
+        .fileUpload {
+            margin: 10px 0;
+        }
+
+        .detectionBtn {
+            margin: 10px 0;
+        }
+
+        .dataSection {
+            align-items: center;
+            margin-top: 20px;
+            width: 100%;
+
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            ul {
+                padding: 0;
+
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
